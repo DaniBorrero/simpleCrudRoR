@@ -1,0 +1,40 @@
+<div class="container">
+    <%= form_with model: friend do |form| %>
+        <div>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+        <% friend.errors.full_messages_for(:name).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+        </div>
+    
+        <div>
+        <%= form.label :phone %><br>
+        <%= form.text_field :phone %>
+        <% @friend.errors.full_messages_for(:phone).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label :alias %><br>
+        <%= form.text_field :alias %>
+        <% @friend.errors.full_messages_for(:alias).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    
+    <div>
+        <%= form.label :edad %><br>
+        <%= form.text_field :age %>
+        <% @friend.errors.full_messages_for(:edad).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    
+        <div class="m-3">
+        <%= form.submit %>
+        </div>
+    <% end %>
+  
+</div>

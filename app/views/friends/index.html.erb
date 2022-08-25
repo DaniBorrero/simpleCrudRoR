@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Friends</h1>
+
+    # Falta acomodar estilos de la tabla
+    <ul>
+        <% @friends.each do |friend| %>
+            <li>
+            <%= link_to friend.name, friend %>
+            Edad: <%= friend.age %>
+            Phone: <%= friend.phone %>
+            Alias: <%= friend.alias %>
+            </li>
+        <% end %>
+    </ul>
+</div>
+<%= link_to "Nuevo amigo", new_friend_path %>
+

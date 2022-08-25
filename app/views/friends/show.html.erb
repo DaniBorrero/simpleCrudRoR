@@ -1,0 +1,15 @@
+<div class="container">
+    <h1><%= @friends.name %></h1>
+    <p><%= @friends.phone%></p>
+    <p><%= @friends.alias%></p>
+    <ul>
+        <li><%= link_to "Edit", edit_friend_path(@friends) %></li>
+        <li><%= link_to "Destroy", friend_path(@friends), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+    </ul>
+    <%= link_to "Volver" , root_path %>
+</div>
+
+
