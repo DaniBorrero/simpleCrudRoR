@@ -8,7 +8,7 @@
 
 ```shell
 git clone https://github.com/DaniBorrero/simpleCrudRoR.git
-cd project
+cd simpleCrudRoR
 ```
 
 ### Check your Ruby version
