@@ -1,7 +1,50 @@
 * {
-    background: rgb(235, 225, 225);
-    font-family: Arial, Helvetica, sans-serif;
+    max-width: 500px;
+    margin: auto;
 }
+
+body {
+    margin:30px;
+    background: rgb(114, 54, 54);
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+h1 {
+    color: black;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+table, th, td {
+    border: 1px solid;
+    padding: 3px;
+}s
+
+th {
+    background-color: rgb(146, 241, 167);
+}
+
+td {
+    background-color: darkkhaki;
+}
+button {
+    height: 30px;
+    margin: 8px;
+    background-color: rgb(49, 94, 134);
+    text-decoration: none;
+}
+
+div {
+    background-color: rgb(126, 109, 129);
+    padding: 6px;
+    border-radius: 20px;
+    
+}
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

@@ -1,4 +1,4 @@
-<div class="container">
+<div>
     <%= form_with model: friend do |form| %>
         <div>
         <%= form.label :name %><br>
@@ -32,8 +32,8 @@
         <% end %>
     </div>
     
-        <div class="m-3">
-        <%= form.submit %>
+        <div>
+        <button><% form.submit %> Aceptar</button>
         </div>
     <% end %>
   

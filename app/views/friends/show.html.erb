@@ -1,15 +1,27 @@
-<div class="container">
-    <h1><%= @friends.name %></h1>
-    <p><%= @friends.phone%></p>
-    <p><%= @friends.alias%></p>
-    <ul>
-        <li><%= link_to "Edit", edit_friend_path(@friends) %></li>
-        <li><%= link_to "Destroy", friend_path(@friends), data: {
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>telefono</th>
+    <th>Edad</th>
+    <th>alias</th>
+    
+  </tr>
+ 
+  
+    <tr>
+      <td><%= @friends.name %></td>
+      <td><%= @friends.phone %></td>
+      <td><%= @friends.age %></td>
+      <td><%= @friends.alias %></td>
+      <td><%= link_to 'Editar', edit_friend_path(@friends) %></td>
+      <td><%= link_to "Destroy", friend_path(@friends), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
-                  } %></li>
-    </ul>
-    <%= link_to "Volver" , root_path %>
-</div>
+                  } %></td>
+    </tr>
+</table>
+
+<button><%= link_to "Volver", root_path %></button>
+
 
 

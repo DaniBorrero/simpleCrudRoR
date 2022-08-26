@@ -1,17 +1,24 @@
-<div class="container">
-    <h1>Friends</h1>
+<h1>Amigos</h1>
 
-    # Falta acomodar estilos de la tabla
-    <ul>
-        <% @friends.each do |friend| %>
-            <li>
-            <%= link_to friend.name, friend %>
-            Edad: <%= friend.age %>
-            Phone: <%= friend.phone %>
-            Alias: <%= friend.alias %>
-            </li>
-        <% end %>
-    </ul>
-</div>
-<%= link_to "Nuevo amigo", new_friend_path %>
 
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>telefono</th>
+    <th>Edad</th>
+    <th>alias</th>
+    <th>Action</th>
+  </tr>
+ 
+  <% @friends.each do |friend| %>
+    <tr>
+      <td><%= friend.name %></td>
+      <td><%= friend.phone %></td>
+      <td><%= friend.age %></td>
+      <td><%= friend.alias %></td>
+      <td><%= link_to 'Show', friend_path(friend) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<button> <%= link_to "Agregar amigo", new_friend_path %></button>
